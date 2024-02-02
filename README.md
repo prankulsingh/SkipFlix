@@ -9,6 +9,15 @@ SkipFlix is a Chromium extension designed to enhance your binge-watching experie
 
 ## Installation
 
+1. Download the SkipFlix extension files.
+2. Open your Chromium-based browser (e.g., Google Chrome).
+3. Navigate to the Extensions settings by clicking on the three dots in the top-right corner, then selecting "More tools" > "Extensions."
+4. Enable Developer mode by toggling the switch in the top-right corner.
+5. Click on the "Load unpacked" button and select the folder containing the SkipFlix extension files.
+6. The SkipFlix extension should now be installed and ready to use.
+
+OR (if you don't use Google Chrome)
+
 1. Download the SkipFlix extension .crx file from the [Releases](https://github.com/prankulsingh/SkipFlix/releases) section of this GitHub repository.
 2. Open your Chromium-based browser (e.g., Google Chrome).
 3. Navigate to the Extensions settings by clicking on the three dots in the top-right corner, then selecting "More tools" > "Extensions."
