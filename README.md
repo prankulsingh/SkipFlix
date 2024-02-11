@@ -42,8 +42,4 @@ SkipFlix is designed solely for enhancing the Netflix binge-watching experience.
 
 For any feedback, suggestions, or support requests, please contact me.
 
-## Known Issues
-
-SkipFlix notification popup doesn't appear when your browser is using #top-layer to display the content (eg. full screen video). Currently, I don't know how to fix it. If you have a fix, please raise a PR.
-
 Happy binge-watching with SkipFlix! 🍿📺
