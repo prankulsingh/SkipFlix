@@ -34,7 +34,7 @@ const bodyObserver = new MutationObserver(mutations => {
                                         console.warn(error);
                                     }
                                 },
-                                800
+                                100
                             );
                             try {
                                 skippableButtonList[0].querySelector('span').innerHTML = "Skipping...";

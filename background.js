@@ -20,9 +20,9 @@ function displayPopup(skipEnabled) {
         chrome.scripting.executeScript({
             target: {tabId: tab.id},
             func: (skipEnabled) => {
-                const popup = document.createElement('div');
-                popup.style.cssText = `
-                    position: fixed;
+                const dialog = document.createElement('dialog');
+                dialog.style.cssText = `
+                    position: sticky;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -32,12 +32,15 @@ function displayPopup(skipEnabled) {
                     border: 1px solid #ccc;
                     font-size: 40px;
                     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-                    z-index: 99999999 !important;
+                    border-radius: 10px;
+                    min-width: 160px;
+                    text-align: center;
                 `;
-                popup.textContent = skipEnabled ? "Skipping ON" : "Skipping OFF"
-                document.body.appendChild(popup);
+                dialog.textContent = skipEnabled ? "✅ Skipping ON" : "❌ Skipping OFF"
+                document.body.appendChild(dialog);
+                dialog.showModal();
                 setTimeout(() => {
-                    popup.remove();
+                    dialog.remove();
                 }, 1000);
             },
             args: [skipEnabled] // Pass skipEnabled as an argument
