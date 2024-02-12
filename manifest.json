@@ -18,7 +18,8 @@
     {
       "matches": ["https://www.netflix.com/*"],
       "js": ["content.js"],
-      "run_at": "document_start"
+      "css": ["dialog.css"],
+      "run_at": "document_end"
     }
   ],
   "commands": {
