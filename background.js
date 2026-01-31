@@ -49,9 +49,19 @@ function displayPopup(skipEnabled) {
                 const fullscreenListener = () => appendDialog();
                 document.addEventListener('fullscreenchange', fullscreenListener);
 
+                document.addEventListener('fullscreenchange', fullscreenListener);
+
+                // Auto-close sequence with animation
                 setTimeout(() => {
-                    dialog.remove();
-                    document.removeEventListener('fullscreenchange', fullscreenListener);
+                    // Trigger fade out
+                    dialog.style.opacity = '0';
+
+                    // Wait for transition to finish (300ms) before removing
+                    setTimeout(() => {
+                        dialog.remove();
+                        document.removeEventListener('fullscreenchange', fullscreenListener);
+                    }, 300);
+
                 }, 1000);
             },
             args: [skipEnabled]
