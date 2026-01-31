@@ -62,12 +62,16 @@ const trySkip = () => {
         console.log('Skippable button found');
 
         try {
-            button.click();
-            console.log('Skipping...');
-
             // Visual feedback
             const span = button.querySelector('span');
             if (span) span.innerHTML = "Skipping...";
+
+            console.log('Skipping...');
+
+            // Delay click to allow text update to render
+            setTimeout(() => {
+                try { button.click(); } catch (e) { }
+            }, 100);
 
         } catch (error) {
             console.warn(error);
